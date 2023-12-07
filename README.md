@@ -9,7 +9,7 @@ Portfolio Personal CV creado con HTML y CSS.
 *[Portoflio-Web](https://maximilianoviquez.github.io/Portfolio/)
 
 ## Ver ejemplo en vivo
-- [https://maximilianoviquez.github.io/Pagina-Audiolibros/]((https://maximilianoviquez.github.io/Portfolio/))
+- [https://maximilianoviquez.github.io/Portfolio/](https://maximilianoviquez.github.io/Portfolio/)
 
 ## Instalacion
 Este proyecto no necesita de instalacion. simplemente abre la carpeta o haz click en el .html
