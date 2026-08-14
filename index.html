@@ -2,154 +2,363 @@
 <html lang="es">
 
 <head>
-    <title>Maximiliano Viquez CV</title>
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('lang');
+            var lang = saved || (navigator.language && navigator.language.toLowerCase().indexOf('en') === 0 ? 'en' : 'es');
+            document.documentElement.dataset.lang = lang;
+            document.documentElement.lang = lang;
+        } catch (e) {}
+    })();
+    </script>
+
+    <title>Maximiliano Viquez — Full Stack Developer</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-
-    <!--Primero el móvil, no tender a hacer zoom, sino levantar a escala natural siempre y cuando haya
-       sido pensado como un sitio responsive, y anular el comportamiento de ajustar a los límites del dispositivo
-       el contenido, cuando este sobresalga-->
+    <meta name="description" content="Maximiliano Viquez — Full Stack Developer especializado en microservicios, Node.js, React/React Native y arquitecturas cloud.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    <!--Bootstrap CSS-->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <!--CSS Propio-->
     <link href="css/estilos.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@200&family=PT+Serif:ital@0;1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@200&family=PT+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-
 
     <div class="circulos">
         <svg class="circulo circulo1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path class="path" d="M62.6,-16.8C71.8,7.9,63.4,41.8,44.6,53.7C25.8,65.5,-3.4,55.3,-25.5,38.4C-47.6,21.6,-62.5,-1.8,-57.1,-21.3C-51.6,-40.9,-25.8,-56.7,0.4,-56.8C26.7,-57,53.4,-41.5,62.6,-16.8Z" transform="translate(100 100)" />
-          </svg> 
-          <svg class="circulo circulo2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path  class="path" d="M33.8,-42.1C42.4,-33.1,46.9,-21.1,51,-7.6C55,5.9,58.5,20.8,53.6,32.5C48.7,44.3,35.5,52.8,20.3,60.4C5,67.9,-12.3,74.6,-24.7,69.4C-37.1,64.2,-44.7,47.2,-50.2,31.8C-55.8,16.4,-59.4,2.6,-60.1,-13.7C-60.9,-29.9,-58.8,-48.8,-48.3,-57.4C-37.8,-66,-18.9,-64.4,-3.1,-60.6C12.6,-56.9,25.2,-51,33.8,-42.1Z" transform="translate(100 100)" />
-          </svg>
-          <svg class="circulo circulo3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        </svg>
+        <svg class="circulo circulo2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" d="M33.8,-42.1C42.4,-33.1,46.9,-21.1,51,-7.6C55,5.9,58.5,20.8,53.6,32.5C48.7,44.3,35.5,52.8,20.3,60.4C5,67.9,-12.3,74.6,-24.7,69.4C-37.1,64.2,-44.7,47.2,-50.2,31.8C-55.8,16.4,-59.4,2.6,-60.1,-13.7C-60.9,-29.9,-58.8,-48.8,-48.3,-57.4C-37.8,-66,-18.9,-64.4,-3.1,-60.6C12.6,-56.9,25.2,-51,33.8,-42.1Z" transform="translate(100 100)" />
+        </svg>
+        <svg class="circulo circulo3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path class="path" d="M42.6,-34.3C57.4,-15.4,73.1,2.4,72.3,20.8C71.5,39.1,54.3,58,35.8,62.3C17.3,66.6,-2.4,56.3,-22.8,46.7C-43.3,37.2,-64.4,28.3,-71.1,12.5C-77.7,-3.4,-69.7,-26.4,-55.5,-45.2C-41.2,-64,-20.6,-78.6,-3.4,-75.9C13.9,-73.3,27.8,-53.2,42.6,-34.3Z" transform="translate(100 100)" />
-          </svg>
-          <svg class="circulo circulo4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        </svg>
+        <svg class="circulo circulo4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path class="path" d="M62.6,-16.8C71.8,7.9,63.4,41.8,44.6,53.7C25.8,65.5,-3.4,55.3,-25.5,38.4C-47.6,21.6,-62.5,-1.8,-57.1,-21.3C-51.6,-40.9,-25.8,-56.7,0.4,-56.8C26.7,-57,53.4,-41.5,62.6,-16.8Z" transform="translate(100 100)" />
-          </svg>
-
+        </svg>
     </div>
 
+    <header class="header" id="header">
+        <h1 class="h1"><a href="#inicio" title="Maximiliano Viquez" class="a logo">
+            <span class="logo-initials">MV</span>
+            <span class="logo-full">Maximiliano Viquez</span>
+        </a></h1>
 
-    <header class="header">
-        <h1 class="h1"><a href="#inicio" title="Maximiliano Viquez" class="a">Maximiliano Viquez</a></h1>
-        <nav class="nav">
+        <nav class="nav" id="nav">
             <ul class="ul">
-                <li class="li"><a href="#inicio" title="Inicio" class="a">Welcome</a></li>
-                <li class="li"><a href="#works" title="Works" class="a">Works</a></li>
-                <li class="li"><a href="#about" title="About" class="a">About</a></li>
+                <li class="li"><a href="#inicio" class="a nav-link" data-target="inicio"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+                <li class="li"><a href="#experience" class="a nav-link" data-target="experience"><span class="lang-es">Experiencia</span><span class="lang-en">Experience</span></a></li>
+                <li class="li"><a href="#skills" class="a nav-link" data-target="skills"><span class="lang-es">Tecnologías</span><span class="lang-en">Technologies</span></a></li>
+                <li class="li"><a href="#about" class="a nav-link" data-target="about"><span class="lang-es">Sobre mí</span><span class="lang-en">About</span></a></li>
+                <li class="li"><a href="#contact" class="a nav-link" data-target="contact"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a></li>
             </ul>
         </nav>
+
+        <div class="header-actions">
+            <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+                <span class="lang-opt" data-value="es">ES</span><span class="lang-opt" data-value="en">EN</span>
+            </button>
+            <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
     <main class="main">
 
-       <div class="seccion" id="inicio">
-        <section class="section info">
-            <h2 class="h2">Maximiliano Viquez</h2>
-            <h3 class="h3">Programmer and Information Technology Analyst Student</h3>
+        <div class="seccion hero" id="inicio">
+            <section class="section info">
+                <div class="hero-media reveal">
+                    <img src="img/fotocv.jpeg" alt="Maximiliano Viquez" class="hero-photo" loading="eager">
+                </div>
 
-            <ul class="ul">
-                <li class="li"><a href="https://github.com/maximilianoviquez" class="a" title="Github">Visit mi Github</a></li>
-                <li class="li"><a href="https://www.linkedin.com/in/maximilianoviquez/" class="a" title="LinkedIn">Visit mi LinkedIn</a></li>
+                <p class="eyebrow reveal"><span class="lang-es">Analista Programador · Montevideo, Uruguay</span><span class="lang-en">Programmer Analyst · Montevideo, Uruguay</span></p>
+                <h2 class="h2 reveal">Maximiliano Viquez</h2>
+                <h3 class="h3 reveal"><span class="lang-es">Full Stack Developer</span><span class="lang-en">Full Stack Developer</span></h3>
+
+                <ul class="role-pills reveal">
+                    <li class="role-pill"><span class="lang-es">Node.js &amp; Microservicios</span><span class="lang-en">Node.js &amp; Microservices</span></li>
+                    <li class="role-pill"><span class="lang-es">Mobile · Web · Backend</span><span class="lang-en">Mobile · Web · Backend</span></li>
+                    <li class="role-pill"><span class="lang-es">Clean Architecture</span><span class="lang-en">Clean Architecture</span></li>
+                    <li class="role-pill"><span class="lang-es">Líder Técnico</span><span class="lang-en">Technical Lead</span></li>
+                </ul>
+
+                <p class="lead reveal">
+                    <span class="lang-es">Desarrollador Full Stack con más de 5 años de experiencia diseñando y manteniendo sistemas distribuidos basados en microservicios y Node.js. Experto en construir productos completos (Mobile/Web/Backend) enfocados en escalabilidad, Clean Architecture, rendimiento y buenas prácticas de seguridad.</span>
+                    <span class="lang-en">Full Stack Developer with over 5 years of experience designing and maintaining distributed systems based on microservices and Node.js. Expert in building complete products (Mobile/Web/Backend) focused on scalability, Clean Architecture, performance, and security best practices.</span>
+                </p>
+
+                <ul class="ul cta reveal">
+                    <li class="li"><a href="https://github.com/maximilianoviquez" class="a btn btn-icon" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                        <span>GitHub</span>
+                    </a></li>
+                    <li class="li"><a href="https://www.linkedin.com/in/maximilianoviquez/" class="a btn btn-icon" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/></svg>
+                        <span>LinkedIn</span>
+                    </a></li>
+                    <li class="li"><a href="assets/cv/Maximiliano-Viquez-CV-ES.pdf" class="a btn btn-primary lang-es" download>
+                        <span>Descargar CV</span>
+                    </a>
+                    <a href="assets/cv/Maximiliano-Viquez-CV-EN.pdf" class="a btn btn-primary lang-en" download>
+                        <span>Download CV</span>
+                    </a></li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="seccion experience" id="experience">
+            <p class="eyebrow reveal"><span class="lang-es">Trayectoria</span><span class="lang-en">Career</span></p>
+            <h2 class="h2 reveal"><span class="lang-es">Experiencia</span><span class="lang-en">Experience</span></h2>
+
+            <ol class="timeline">
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-head">
+                            <div>
+                                <h3 class="role"><span class="lang-es">Full-stack Developer, Líder de IT</span><span class="lang-en">Full-stack Developer, IT Lead</span></h3>
+                                <p class="company">Pinealage</p>
+                            </div>
+                            <p class="period"><span class="lang-es">Junio 2025 – Actualidad</span><span class="lang-en">June 2025 – Present</span></p>
+                        </div>
+                        <ul class="bullets">
+                            <li><span class="lang-es">Diseño e implementación de 3 microservicios independientes: Usuarios/Suscripciones (PostgreSQL + Prisma), Matchmaking/Gamificación (MongoDB + Redis/Bull) y Notificaciones (FCM + SendGrid vía BullMQ).</span><span class="lang-en">Design and implementation of 3 independent microservices: Users/Subscriptions (PostgreSQL + Prisma), Matchmaking/Gamification (MongoDB + Redis/Bull), and Notifications (FCM + SendGrid via BullMQ).</span></li>
+                            <li><span class="lang-es">Comunicación bidireccional en tiempo real mediante WebSockets/Socket.IO para chat y eventos en vivo.</span><span class="lang-en">Bidirectional real-time communication via WebSockets/Socket.IO for chat and live events.</span></li>
+                            <li><span class="lang-es">Lógica de emparejamiento geolocalizado, pagos nativos in-app (Expo IAP) con validación de recibos (Google Play/Apple), y formularios complejos con React Hook Form + Zod.</span><span class="lang-en">Geolocation-based matchmaking logic, native in-app payments (Expo IAP) with receipt validation (Google Play/Apple), and complex forms using React Hook Form + Zod.</span></li>
+                            <li><span class="lang-es">Autenticación híbrida Firebase Auth + JWT, gestión de tokens con interceptores Axios, y persistencia de estado con Redux Toolkit + Redux Persist.</span><span class="lang-en">Hybrid Firebase Auth + JWT authentication, token management with Axios interceptors, and state persistence with Redux Toolkit + Redux Persist.</span></li>
+                            <li><span class="lang-es">Pipeline de CI/CD automatizado hacia App Store y Play Store vía EAS.</span><span class="lang-en">Automated CI/CD pipeline to App Store and Play Store via EAS.</span></li>
+                            <li><span class="lang-es">Infraestructura cloud en GCP: VMs, Storage, PostgreSQL 15, MongoDB Atlas y gestión de procesos en producción con PM2.</span><span class="lang-en">Cloud infrastructure on GCP: VMs, Storage, PostgreSQL 15, MongoDB Atlas, and production process management with PM2.</span></li>
+                            <li><span class="lang-es">Panel administrativo (React 18 + Vite) con métricas en tiempo real (Recharts) para seguimiento de usuarios, conversión y análisis de negocio.</span><span class="lang-en">Admin dashboard (React 18 + Vite) with real-time metrics (Recharts) for user tracking, conversion rates, and business analytics.</span></li>
+                            <li><span class="lang-es">Definición del stack tecnológico, patrones de diseño, tipado estricto y buenas prácticas de seguridad para el equipo completo.</span><span class="lang-en">Definition of the technology stack, design patterns, strict typing, and security best practices for the entire team.</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-head">
+                            <div>
+                                <h3 class="role"><span class="lang-es">Desarrollador Full Stack</span><span class="lang-en">Full Stack Developer</span></h3>
+                                <p class="company">SoyDelivery</p>
+                            </div>
+                            <p class="period"><span class="lang-es">Abril 2025 – Actualidad</span><span class="lang-en">April 2025 – Present</span></p>
+                        </div>
+                        <ul class="bullets">
+                            <li><span class="lang-es">Arquitectura e implementación de un motor geoespacial propio para la optimización de rutas de entrega, con soporte para cientos de pedidos simultáneos, multi-backend de routing (OSRM local/remoto + Mapbox) y geocodificación vía Nominatim/Overpass API, incluyendo cálculo de matrices de distancia.</span><span class="lang-en">Architecture and implementation of a custom geospatial engine for delivery route optimization, supporting hundreds of simultaneous orders, multi-backend routing (local/remote OSRM + Mapbox), and geocoding via Nominatim/Overpass API, including distance matrix calculation.</span></li>
+                            <li><span class="lang-es">Desarrollo end-to-end de un sistema de gestión del ciclo de vida de entregas: asignación y creación de rutas, monitoreo en tiempo real de estados y conductores, e integración con APIs de múltiples clientes. Conectado con el área financiera y el sistema legado GeneXus (Programación Orientada a Eventos), con exportación a Excel y notificaciones por email.</span><span class="lang-en">End-to-end development of a delivery lifecycle management system: route assignment and creation, real-time tracking of statuses and drivers, and integration with multiple client APIs. Connected to the financial area and the legacy GeneXus system (Event-Driven Programming), with Excel export and email notifications.</span></li>
+                            <li><span class="lang-es">Orquestación de flujos conversacionales automatizados mediante un backend con IA, orientado a atención al cliente. El sistema identifica intenciones, genera respuestas automáticas y gestiona la derivación a agentes humanos a través de canales de SMS y voz (Twilio).</span><span class="lang-en">Orchestration of automated conversational flows through an AI-powered backend focused on customer service. The system identifies user intents, generates automated responses, and manages escalation to human agents via SMS and voice channels (Twilio).</span></li>
+                            <li><span class="lang-es">Monitoreo en tiempo real del flujo de clientes en centros de distribución: gestión de estados de cola, integración con tótems físicos y asignación de slots de retiro por franja horaria.</span><span class="lang-en">Real-time monitoring of customer flow at distribution centers: queue state management, integration with physical kiosks, and time-slot assignment for order pickup.</span></li>
+                            <li><span class="lang-es">Construcción de infraestructura de mensajería con RabbitMQ, persistencia distribuida y centralización de logs mediante Elasticsearch.</span><span class="lang-en">Messaging infrastructure built with RabbitMQ, distributed persistence, and centralized log management via Elasticsearch.</span></li>
+                            <li><span class="lang-es">Diseño e implementación de interfaces modulares en React orientadas a entornos de alta operatividad.</span><span class="lang-en">Design and implementation of modular React interfaces built for high-operability environments.</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-head">
+                            <div>
+                                <h3 class="role"><span class="lang-es">Líder de Proyecto y Co-Fundador</span><span class="lang-en">Project Lead &amp; Co-Founder</span></h3>
+                                <p class="company">ConViven</p>
+                            </div>
+                            <p class="period"><span class="lang-es">Marzo 2024 – Junio 2025</span><span class="lang-en">March 2024 – June 2025</span></p>
+                        </div>
+                        <ul class="bullets">
+                            <li><span class="lang-es">Desarrollo completo del producto, que incluye una aplicación móvil (React Native/Expo), un panel web (React/Vite) y el backend.</span><span class="lang-en">Full product development, including a mobile application (React Native/Expo), a web panel (React/Vite), and the backend.</span></li>
+                            <li><span class="lang-es">Planificación y optimización de procesos.</span><span class="lang-en">Process planning and optimization.</span></li>
+                            <li><span class="lang-es">Coordinación del equipo, compuesto por 2 programadores y 2 diseñadores.</span><span class="lang-en">Team coordination, consisting of 2 developers and 2 designers.</span></li>
+                            <li><span class="lang-es">Supervisión del desarrollo y aseguramiento del cumplimiento de plazos y entregables.</span><span class="lang-en">Development oversight and delivery of milestones on schedule.</span></li>
+                            <li><span class="lang-es">Diseño e implementación de soluciones escalables.</span><span class="lang-en">Design and implementation of scalable solutions.</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-head">
+                            <div>
+                                <h3 class="role"><span class="lang-es">Freelancer</span><span class="lang-en">Freelancer</span></h3>
+                                <p class="company"><span class="lang-es">Desarrollo de proyectos a medida</span><span class="lang-en">Custom project development</span></p>
+                            </div>
+                            <p class="period"><span class="lang-es">Diciembre 2023 – Abril 2025</span><span class="lang-en">December 2023 – April 2025</span></p>
+                        </div>
+                        <ul class="bullets">
+                            <li><span class="lang-es">Creación y desarrollo de proyectos tecnológicos escalables.</span><span class="lang-en">Development of scalable technology projects.</span></li>
+                            <li><span class="lang-es">Desarrollo de aplicaciones a medida.</span><span class="lang-en">Custom application development.</span></li>
+                            <li><span class="lang-es">Mejora de código y arquitectura aplicando principios SOLID.</span><span class="lang-en">Code and architecture improvements applying SOLID principles.</span></li>
+                            <li><span class="lang-es">Optimización de rendimiento y tiempos de carga.</span><span class="lang-en">Performance and load time optimization.</span></li>
+                            <li><span class="lang-es">Proyectos destacados: Red Social (C#, .NET, ASP.NET 7.0 MVC), Gestión de Inventario (C#, MVC, .NET, SQL, WebAPI REST), Juego de Poker (Java, Experto, Observer, MVC, Strategy).</span><span class="lang-en">Notable projects: Social Network (C#, .NET, ASP.NET 7.0 MVC), Inventory Management (C#, MVC, .NET, SQL, REST WebAPI), Poker Game (Java, Expert, Observer, MVC, Strategy).</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-card">
+                        <div class="timeline-head">
+                            <div>
+                                <h3 class="role"><span class="lang-es">Desarrollador de Software</span><span class="lang-en">Software Developer</span></h3>
+                                <p class="company">IBERTRANS SRL</p>
+                            </div>
+                            <p class="period"><span class="lang-es">Marzo 2020 – Diciembre 2023</span><span class="lang-en">March 2020 – December 2023</span></p>
+                        </div>
+                        <ul class="bullets">
+                            <li><span class="lang-es">Desarrollo y diseño de aplicaciones web.</span><span class="lang-en">Web application development and design.</span></li>
+                            <li><span class="lang-es">Mantenimiento y soporte.</span><span class="lang-en">Maintenance and support.</span></li>
+                            <li><span class="lang-es">Desarrollo de diagramas y planificación técnica.</span><span class="lang-en">Diagram creation and technical planning.</span></li>
+                            <li><span class="lang-es">Gestión de documentación.</span><span class="lang-en">Documentation management.</span></li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ol>
+        </section>
+
+        <section class="seccion skills" id="skills">
+            <p class="eyebrow reveal"><span class="lang-es">Stack</span><span class="lang-en">Stack</span></p>
+            <h2 class="h2 reveal"><span class="lang-es">Tecnologías</span><span class="lang-en">Technologies</span></h2>
+            <p class="lead reveal"><span class="lang-es">Herramientas y tecnologías que uso día a día — esta lista la voy actualizando a medida que sumo skills nuevas.</span><span class="lang-en">Tools and technologies I use day to day — this list keeps growing as I pick up new skills.</span></p>
+
+            <div id="tech-grid" class="tech-grid"></div>
+
+            <div class="pattern-groups reveal">
+                <div class="pattern-group">
+                    <h4 class="pattern-title"><span class="lang-es">Arquitecturas y patrones</span><span class="lang-en">Architectures &amp; Patterns</span></h4>
+                    <ul class="chip-list">
+                        <li class="chip">Clean Architecture</li>
+                        <li class="chip">Microservices</li>
+                        <li class="chip">MVC</li>
+                        <li class="chip">SOLID</li>
+                        <li class="chip">Repository Pattern</li>
+                        <li class="chip">Strategy</li>
+                        <li class="chip">Observer</li>
+                        <li class="chip">Expert</li>
+                        <li class="chip">Pipes and Filters</li>
+                    </ul>
+                </div>
+                <div class="pattern-group">
+                    <h4 class="pattern-title"><span class="lang-es">Metodologías</span><span class="lang-en">Methodologies</span></h4>
+                    <ul class="chip-list">
+                        <li class="chip">Scrum</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion about" id="about">
+            <p class="eyebrow reveal"><span class="lang-es">Perfil</span><span class="lang-en">Profile</span></p>
+            <h2 class="h2 reveal"><span class="lang-es">Sobre mí</span><span class="lang-en">About me</span></h2>
+
+            <p class="p reveal">
+                <span class="lang-es">Desarrollador Full Stack con más de 5 años de experiencia en el diseño y mantenimiento de sistemas distribuidos basados en microservicios y Node.js. Experto en la creación de productos completos (Mobile/Web/Backend) enfocados en escalabilidad, Clean Architecture, optimización de rendimiento y buenas prácticas de seguridad. Experiencia liderando equipos técnicos, centrado en entregar soluciones robustas, eficientes y alineadas a los objetivos del negocio. Apasionado por resolver problemas con el uso de la tecnología.</span>
+                <span class="lang-en">Full Stack Developer with over 5 years of experience designing and maintaining distributed systems based on microservices and Node.js. Expert in building complete products (Mobile/Web/Backend) focused on scalability, Clean Architecture, performance optimization, and security best practices. Experienced in leading technical teams, committed to delivering robust, efficient solutions aligned with business objectives. Passionate about solving problems through technology.</span>
+            </p>
+
+            <ul class="stats reveal">
+                <li class="stat"><span class="stat-number" data-count="5" data-suffix="+">0</span><span class="stat-label"><span class="lang-es">Años de experiencia</span><span class="lang-en">Years of experience</span></span></li>
+                <li class="stat"><span class="stat-number" data-count="3">0</span><span class="stat-label"><span class="lang-es">Microservicios en producción</span><span class="lang-en">Microservices in production</span></span></li>
+                <li class="stat"><span class="stat-number" data-count="5">0</span><span class="stat-label"><span class="lang-es">Roles / proyectos liderados</span><span class="lang-en">Roles / projects led</span></span></li>
+                <li class="stat"><span class="stat-number" data-count="30" data-suffix="+">0</span><span class="stat-label"><span class="lang-es">Tecnologías dominadas</span><span class="lang-en">Technologies mastered</span></span></li>
             </ul>
 
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <h4 class="pattern-title"><span class="lang-es">Formación académica</span><span class="lang-en">Academic background</span></h4>
+                    <ul class="edu-list">
+                        <li>
+                            <p class="edu-title">Universidad ORT Uruguay</p>
+                            <p class="edu-sub"><span class="lang-es">Analista en Tecnologías de la Información</span><span class="lang-en">Information Technology Analyst</span> · 2023 – 2026</p>
+                        </li>
+                        <li>
+                            <p class="edu-title"><span class="lang-es">Máster en Java — Programación funcional en Java 8 (Lambda, API Stream)</span><span class="lang-en">Java Masterclass — Functional programming in Java 8 (Lambda, Stream API)</span></p>
+                            <p class="edu-sub">Udemy · 2023</p>
+                        </li>
+                        <li>
+                            <p class="edu-title"><span class="lang-es">iOS &amp; Swift — Desarrollo en Swift, UI iOS, gestión de datos, integración API</span><span class="lang-en">iOS &amp; Swift — Swift development, iOS UI, data management, API integration</span></p>
+                            <p class="edu-sub">Udemy · 2023</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-card reveal">
+                    <h4 class="pattern-title"><span class="lang-es">Idiomas</span><span class="lang-en">Languages</span></h4>
+                    <ul class="edu-list">
+                        <li>
+                            <p class="edu-title"><span class="lang-es">Español</span><span class="lang-en">Spanish</span></p>
+                            <p class="edu-sub"><span class="lang-es">Nativo</span><span class="lang-en">Native</span></p>
+                        </li>
+                        <li>
+                            <p class="edu-title"><span class="lang-es">Inglés</span><span class="lang-en">English</span></p>
+                            <p class="edu-sub"><span class="lang-es">Intermedio alto</span><span class="lang-en">Upper intermediate</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
-       </div>
 
-       <section class="seccion works" id="works">
+        <section class="seccion contact" id="contact">
+            <p class="eyebrow reveal"><span class="lang-es">Hablemos</span><span class="lang-en">Let's talk</span></p>
+            <h2 class="h2 reveal"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></h2>
+            <p class="lead reveal"><span class="lang-es">¿Tenés un proyecto en mente o una posición para un perfil Full Stack senior? Escribime.</span><span class="lang-en">Have a project in mind or a role for a senior Full Stack profile? Reach out.</span></p>
 
-        <h2 class="h2">Works and Skills</h2>
-        <p>here I present my works and skills:</p>
+            <ul class="contact-grid reveal">
+                <li class="contact-card">
+                    <p class="contact-label"><span class="lang-es">Email</span><span class="lang-en">Email</span></p>
+                    <a class="a" href="mailto:viquez.ti@gmail.com">viquez.ti@gmail.com</a>
+                </li>
+                <li class="contact-card">
+                    <p class="contact-label"><span class="lang-es">Teléfono</span><span class="lang-en">Phone</span></p>
+                    <a class="a" href="tel:+59895456888">+598 95 456 888</a>
+                </li>
+                <li class="contact-card">
+                    <p class="contact-label"><span class="lang-es">Ubicación</span><span class="lang-en">Location</span></p>
+                    <p class="a">Montevideo, Uruguay</p>
+                </li>
+                <li class="contact-card">
+                    <p class="contact-label">LinkedIn</p>
+                    <a class="a" href="https://www.linkedin.com/in/maximilianoviquez/" target="_blank" rel="noopener noreferrer">/in/maximilianoviquez</a>
+                </li>
+            </ul>
 
-        <div class="grid">
-            <article class="article">
-                <a class="a" href="#" title="trabajo1">
-                    <p>- Information technology - JavaScript - HTML5 - HTML
-                        - Cascading Style Sheets (CSS) - Responsive Web Design
-                        - Java - Microsoft SQL Server - SQL - 
-                        C# - .NET framework.
-                        - iOS and Swift 5.7 - Python</p>
-                <h4 class="h4"></h4>
-                </a>
-            </article>
-            <article class="article">
-                <a class="a" href="#" title="trabajo1">
-                        <p class="img" loading="lazy">
-                            - CENSUS APP (capture and collection of data in the field)
-                            - SOCIAL NETWORK APPLICATION
-                            - AUDIOBOOKS WEBSITE
-                            - SOCIAL NETWORK PROJECT (with SQL Server database)
-                        </p>
-                <h4 class="h4"></h4>
-                </a>
-            </article>
-        </div>
-       </section>
-
-        
-       <section class="seccion about" id="about">
-        <h2 class="h2">About Me</h2>
-        <p class="p">Information Technology student focused on
-            results, with outstanding communication skills.
-            I have solid knowledge in web design, development
-            of software.</p>
-        <p class="p">I have experience working for the company Ibertrans SRL, as an Administrative position, where I performed administrative functions in the technological area of ​​the company, technical support, management of servers, web pages and applications.</p>
-        <p class="p">Troubleshooting and
-            analytical thinking
-            Documentation skills
-            of projects
-            Teamwork and
-            collaboration on projects
-            academics
-            Research skills
-            and continuous learning
-            Effective communication</p>
-
-        <ul class="rrss">
-            <li class="li">
-                <a href="https://github.com/maximilianoviquez" class="a" title="Nombre" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                      </svg>
-                </a>
-            </li>
-            <li class="li">
-                <a href="https://www.linkedin.com/in/maximilianoviquez/" class="a" title="Nombre" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
-                      </svg>
-                </a>
-            </li>
-        </ul>
-    </section>
+            <ul class="rrss reveal">
+                <li class="li">
+                    <a href="https://github.com/maximilianoviquez" class="a" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="https://www.linkedin.com/in/maximilianoviquez/" class="a" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="li">
+                    <a href="mailto:viquez.ti@gmail.com" class="a" title="Email" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
     </main>
 
-    
-
     <footer class="footer">
-
-        <span class="span">- Maximiliano Viquez -</span>
-
-
+        <span class="span">© <span id="year"></span> Maximiliano Viquez</span>
     </footer>
 
-
-<!-- JavaScript -->
-<script src="js/bootstrap.bundle.js"></script>
-<!--<script src="js/bootstrap.js"></script>-->
+    <!-- JavaScript -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
