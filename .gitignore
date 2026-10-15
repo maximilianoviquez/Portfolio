@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Design-skill working files
+.taste-skill/
+.impeccable/
