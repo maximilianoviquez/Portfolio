@@ -1,22 +1,22 @@
-## Descripcion
+# Maximiliano Viquez — Portfolio
 
-Portfolio Personal CV creado con HTML y CSS.
+Desarrollador Full Stack Senior con más de 5 años llevando productos a producción con Node.js, TypeScript, React y AWS. Construí motores de matchmaking y de ruteo, y una migración cloud que redujo cerca de un 70% los costos de infraestructura.
 
-## Autor ✒️
-**Maximiliano Viquez**
+**Sitio:** [https://maximilianoviquez.github.io/Portfolio/](https://maximilianoviquez.github.io/Portfolio/)
 
-*[LinkedIn](https://www.linkedin.com/in/maximiliano-viquez/)
-*[Portoflio-Web](https://maximilianoviquez.github.io/Portfolio/)
+## Secciones
 
-## Ver ejemplo en vivo
-- [https://maximilianoviquez.github.io/Portfolio/](https://maximilianoviquez.github.io/Portfolio/)
+- Inicio
+- Experiencia
+- Tecnologías
+- Sobre mí (formación e idiomas)
+- Contacto
 
-## Instalacion
-Este proyecto no necesita de instalacion. simplemente abre la carpeta o haz click en el .html
+## Contacto
 
-## Contratacion
-si quieres contratarme puedes escribirme a viquezmaximiliano@gmail.com , para consultas.
+- Email: viquezmaximiliano@gmail.com
+- LinkedIn: [linkedin.com/in/maximilianoviquez](https://www.linkedin.com/in/maximilianoviquez)
 
 ## Licencia
-MIT Public License v3.0
-No puede usarse comercialmente.
+
+MIT

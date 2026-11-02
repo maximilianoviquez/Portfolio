@@ -17,7 +17,7 @@ export function Experience() {
       <ol className="relative w-full max-w-3xl before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-4.5 before:w-0.5 before:bg-linear-to-b before:from-violet before:via-blue before:to-green before:opacity-50">
         {experience.map((job) => (
           <motion.li
-            key={job.company + job.period.es}
+            key={job.company.es + job.period.es}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -32,7 +32,7 @@ export function Experience() {
               <div className="flex flex-wrap justify-between items-baseline gap-2 mb-4">
                 <div>
                   <h3 className="font-serif font-semibold text-xl">{job.role[lang]}</h3>
-                  <p className="text-neutral-400 text-sm mt-0.5">{job.company}</p>
+                  <p className="text-neutral-400 text-sm mt-0.5">{job.company[lang]}</p>
                 </div>
                 <p className="text-xs uppercase tracking-wide text-white/55 whitespace-nowrap">{job.period[lang]}</p>
               </div>
@@ -44,6 +44,17 @@ export function Experience() {
                   </li>
                 ))}
               </ul>
+              {job.links && (
+                <ul className="flex flex-wrap gap-4 mt-4">
+                  {job.links.map((link) => (
+                    <li key={link.href}>
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-neutral-400 hover:underline">
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </motion.li>
         ))}

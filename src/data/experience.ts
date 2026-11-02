@@ -1,121 +1,90 @@
 import type { Bilingual } from '../context/LanguageContext';
 
 export interface Job {
-  company: string;
+  company: Bilingual<string>;
   role: Bilingual<string>;
   period: Bilingual<string>;
   bullets: Bilingual<string[]>;
+  links?: { label: string; href: string }[];
 }
 
 export const experience: Job[] = [
   {
-    company: 'Pinealage',
-    role: { es: 'Full-stack Developer, Líder de IT', en: 'Full-stack Developer, IT Lead' },
-    period: { es: 'Junio 2025 – Actualidad', en: 'June 2025 – Present' },
+    company: { es: 'Pinealage · Freelance', en: 'Pinealage · Freelance' },
+    role: { es: 'Desarrollador Full Stack Senior', en: 'Senior Full Stack Engineer' },
+    period: { es: 'Ene 2026 – Actualidad', en: 'Jan 2026 – Present' },
     bullets: {
       es: [
-        'Diseño e implementación de 3 microservicios independientes: Usuarios/Suscripciones (PostgreSQL + Prisma), Matchmaking/Gamificación (MongoDB + Redis/Bull) y Notificaciones (FCM + SendGrid vía BullMQ).',
-        'Comunicación bidireccional en tiempo real mediante WebSockets/Socket.IO para chat y eventos en vivo.',
-        'Lógica de emparejamiento geolocalizado, pagos nativos in-app (Expo IAP) con validación de recibos (Google Play/Apple), y formularios complejos con React Hook Form + Zod.',
-        'Autenticación híbrida Firebase Auth + JWT, gestión de tokens con interceptores Axios, y persistencia de estado con Redux Toolkit + Redux Persist.',
-        'Pipeline de CI/CD automatizado hacia App Store y Play Store vía EAS.',
-        'Infraestructura cloud en GCP: VMs, Storage, PostgreSQL 15, MongoDB Atlas y gestión de procesos en producción con PM2.',
-        'Panel administrativo (React 18 + Vite) con métricas en tiempo real (Recharts) para seguimiento de usuarios, conversión y análisis de negocio.',
-        'Definición del stack tecnológico, patrones de diseño, tipado estricto y buenas prácticas de seguridad para el equipo completo.',
+        'Construí, como desarrollador principal, una app social de encuentros grupales en iOS y Android con más de 3.700 usuarios, sobre cuatro microservicios en NestJS, React Native y un panel de administración en React.',
+        'Reduje cerca de un 70% los costos de infraestructura al migrar la plataforma de GCP a AWS (EC2, RDS, Secrets Manager), con CI/CD en GitHub Actions y observabilidad con OpenTelemetry y Grafana.',
+        'Diseñé un motor de matchmaking que forma grupos por ubicación, disponibilidad y zona horaria (BullMQ, PostgreSQL, MongoDB geoespacial).',
+        'Implementé suscripciones in-app con validación de recibos en el servidor, webhooks de App Store y Google Play y conciliación automática.',
       ],
       en: [
-        'Design and implementation of 3 independent microservices: Users/Subscriptions (PostgreSQL + Prisma), Matchmaking/Gamification (MongoDB + Redis/Bull), and Notifications (FCM + SendGrid via BullMQ).',
-        'Bidirectional real-time communication via WebSockets/Socket.IO for chat and live events.',
-        'Geolocation-based matchmaking logic, native in-app payments (Expo IAP) with receipt validation (Google Play/Apple), and complex forms using React Hook Form + Zod.',
-        'Hybrid Firebase Auth + JWT authentication, token management with Axios interceptors, and state persistence with Redux Toolkit + Redux Persist.',
-        'Automated CI/CD pipeline to App Store and Play Store via EAS.',
-        'Cloud infrastructure on GCP: VMs, Storage, PostgreSQL 15, MongoDB Atlas, and production process management with PM2.',
-        'Admin dashboard (React 18 + Vite) with real-time metrics (Recharts) for user tracking, conversion rates, and business analytics.',
-        'Definition of the technology stack, design patterns, strict typing, and security best practices for the entire team.',
+        'Built, as primary engineer, a social group-meetup app on iOS and Android with 3,700+ users, on four NestJS microservices, React Native and a React admin console.',
+        'Cut infrastructure costs by roughly 70% by migrating the platform from GCP to AWS (EC2, RDS, Secrets Manager), with CI/CD on GitHub Actions and observability with OpenTelemetry and Grafana.',
+        'Designed a matchmaking engine that forms groups by location, availability and time zone (BullMQ, PostgreSQL, MongoDB geospatial).',
+        'Implemented in-app subscriptions with server-side receipt validation, App Store and Google Play webhooks and automated reconciliation.',
+      ],
+    },
+    links: [
+      { label: 'App Store', href: 'https://apps.apple.com/es/app/pinealage-meditaci%C3%B3n-en-grupo/id6744828001' },
+      { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.pinealage.app&hl=es_UY' },
+    ],
+  },
+  {
+    company: { es: 'SoyDelivery', en: 'SoyDelivery' },
+    role: { es: 'Desarrollador Full Stack', en: 'Full Stack Engineer' },
+    period: { es: 'Abr 2025 – Sep 2026', en: 'Apr 2025 – Sep 2026' },
+    bullets: {
+      es: [
+        'Reduje la planificación de rutas de horas a segundos con un motor propio de optimización que procesa miles de pedidos diarios.',
+        'Desarrollé un servicio propio de geocodificación y una capa de ruteo autoalojada (OSRM, con respaldo en Mapbox), independiente del proveedor.',
+        'Automaticé cientos de conversaciones diarias de soporte por SMS y voz con un servicio basado en LLM (Twilio) que deriva a agentes solo los casos complejos.',
+        'Construí la plataforma de gestión de entregas con seguimiento en tiempo real, integraciones con APIs de clientes y sincronización con un sistema financiero legado en GeneXus.',
+      ],
+      en: [
+        'Reduced route planning from hours to seconds with an in-house optimization engine processing thousands of orders per day.',
+        'Built an in-house geocoding service and a self-hosted, provider-agnostic routing layer (OSRM with Mapbox failover).',
+        'Automated hundreds of daily SMS and voice support conversations with an LLM-based service (Twilio) that escalates only complex cases to agents.',
+        'Built the delivery-management platform with real-time tracking, client API integrations and synchronization with a legacy GeneXus financial system.',
+      ],
+    },
+  },
+  // Project (not an employer): ConViven appears under "Proyectos" in the CV.
+  {
+    company: { es: 'ConViven · Proyecto propio', en: 'ConViven · Own venture' },
+    role: { es: 'Cofundador y Líder Técnico', en: 'Co-founder & Technical Lead' },
+    period: { es: 'Mar 2024 – Actualidad', en: 'Mar 2024 – Present' },
+    bullets: {
+      // TODO: agregar los links de ConViven cuando estén disponibles.
+      es: [
+        'Llevé una plataforma para encontrar compañeros de vivienda de MVP a versión de producción con un equipo de 4 personas (React Native, React, Node.js).',
+      ],
+      en: [
+        'Took a roommate-matching platform from MVP to production release with a team of 4 (React Native, React, Node.js).',
       ],
     },
   },
   {
-    company: 'SoyDelivery',
-    role: { es: 'Desarrollador Full Stack', en: 'Full Stack Developer' },
-    period: { es: 'Abril 2025 – Actualidad', en: 'April 2025 – Present' },
+    company: { es: 'Consultor independiente · Freelance', en: 'Independent Consultant · Freelance' },
+    role: { es: 'Desarrollador Full Stack', en: 'Full Stack Engineer' },
+    period: { es: 'Ene 2024 – Abr 2025', en: 'Jan 2024 – Apr 2025' },
     bullets: {
-      es: [
-        'Arquitectura e implementación de un motor geoespacial propio para la optimización de rutas de entrega, con soporte para cientos de pedidos simultáneos, multi-backend de routing (OSRM local/remoto + Mapbox) y geocodificación vía Nominatim/Overpass API, incluyendo cálculo de matrices de distancia.',
-        'Desarrollo end-to-end de un sistema de gestión del ciclo de vida de entregas: asignación y creación de rutas, monitoreo en tiempo real de estados y conductores, e integración con APIs de múltiples clientes. Conectado con el área financiera y el sistema legado GeneXus (Programación Orientada a Eventos), con exportación a Excel y notificaciones por email.',
-        'Orquestación de flujos conversacionales automatizados mediante un backend con IA, orientado a atención al cliente. El sistema identifica intenciones, genera respuestas automáticas y gestiona la derivación a agentes humanos a través de canales de SMS y voz (Twilio).',
-        'Monitoreo en tiempo real del flujo de clientes en centros de distribución: gestión de estados de cola, integración con tótems físicos y asignación de slots de retiro por franja horaria.',
-        'Construcción de infraestructura de mensajería con RabbitMQ, persistencia distribuida y centralización de logs mediante Elasticsearch.',
-        'Diseño e implementación de interfaces modulares en React orientadas a entornos de alta operatividad.',
-      ],
-      en: [
-        'Architecture and implementation of a custom geospatial engine for delivery route optimization, supporting hundreds of simultaneous orders, multi-backend routing (local/remote OSRM + Mapbox), and geocoding via Nominatim/Overpass API, including distance matrix calculation.',
-        'End-to-end development of a delivery lifecycle management system: route assignment and creation, real-time tracking of statuses and drivers, and integration with multiple client APIs. Connected to the financial area and the legacy GeneXus system (Event-Driven Programming), with Excel export and email notifications.',
-        'Orchestration of automated conversational flows through an AI-powered backend focused on customer service. The system identifies user intents, generates automated responses, and manages escalation to human agents via SMS and voice channels (Twilio).',
-        'Real-time monitoring of customer flow at distribution centers: queue state management, integration with physical kiosks, and time-slot assignment for order pickup.',
-        'Messaging infrastructure built with RabbitMQ, distributed persistence, and centralized log management via Elasticsearch.',
-        'Design and implementation of modular React interfaces built for high-operability environments.',
-      ],
+      es: ['Desarrollé sistemas de gestión y reservas a medida para pymes de gastronomía y servicios.'],
+      en: ['Built custom management and booking systems for small businesses in food service and personal services.'],
     },
   },
   {
-    company: 'ConViven',
-    role: { es: 'Líder de Proyecto y Co-Fundador', en: 'Project Lead & Co-Founder' },
-    period: { es: 'Marzo 2024 – Junio 2025', en: 'March 2024 – June 2025' },
-    bullets: {
-      es: [
-        'Desarrollo completo del producto, que incluye una aplicación móvil (React Native/Expo), un panel web (React/Vite) y el backend.',
-        'Planificación y optimización de procesos.',
-        'Coordinación del equipo, compuesto por 2 programadores y 2 diseñadores.',
-        'Supervisión del desarrollo y aseguramiento del cumplimiento de plazos y entregables.',
-        'Diseño e implementación de soluciones escalables.',
-      ],
-      en: [
-        'Full product development, including a mobile application (React Native/Expo), a web panel (React/Vite), and the backend.',
-        'Process planning and optimization.',
-        'Team coordination, consisting of 2 developers and 2 designers.',
-        'Development oversight and delivery of milestones on schedule.',
-        'Design and implementation of scalable solutions.',
-      ],
-    },
-  },
-  {
-    company: 'Freelancer',
-    role: { es: 'Freelancer', en: 'Freelancer' },
-    period: { es: 'Diciembre 2023 – Abril 2025', en: 'December 2023 – April 2025' },
-    bullets: {
-      es: [
-        'Creación y desarrollo de proyectos tecnológicos escalables.',
-        'Desarrollo de aplicaciones a medida.',
-        'Mejora de código y arquitectura aplicando principios SOLID.',
-        'Optimización de rendimiento y tiempos de carga.',
-        'Proyectos destacados: Red Social (C#, .NET, ASP.NET 7.0 MVC), Gestión de Inventario (C#, MVC, .NET, SQL, WebAPI REST), Juego de Poker (Java, Experto, Observer, MVC, Strategy).',
-      ],
-      en: [
-        'Development of scalable technology projects.',
-        'Custom application development.',
-        'Code and architecture improvements applying SOLID principles.',
-        'Performance and load time optimization.',
-        'Notable projects: Social Network (C#, .NET, ASP.NET 7.0 MVC), Inventory Management (C#, MVC, .NET, SQL, REST WebAPI), Poker Game (Java, Expert, Observer, MVC, Strategy).',
-      ],
-    },
-  },
-  {
-    company: 'IBERTRANS SRL',
+    company: { es: 'IBERTRANS SRL', en: 'IBERTRANS SRL' },
     role: { es: 'Desarrollador de Software', en: 'Software Developer' },
-    period: { es: 'Marzo 2020 – Diciembre 2023', en: 'March 2020 – December 2023' },
+    period: { es: 'Mar 2020 – Dic 2023', en: 'Mar 2020 – Dec 2023' },
     bullets: {
       es: [
-        'Desarrollo y diseño de aplicaciones web.',
-        'Mantenimiento y soporte.',
-        'Desarrollo de diagramas y planificación técnica.',
-        'Gestión de documentación.',
+        'Reemplacé la gestión en planillas por una plataforma propia (C#/.NET, SQL Server) para flota, choferes, viajes, combustible y mantenimiento, con reportes a demanda para unas 130 entregas mensuales.',
       ],
       en: [
-        'Web application development and design.',
-        'Maintenance and support.',
-        'Diagram creation and technical planning.',
-        'Documentation management.',
+        'Replaced spreadsheet-based management with an in-house platform (C#/.NET, SQL Server) for fleet, drivers, trips, fuel and maintenance, with on-demand reporting for ~130 deliveries per month.',
       ],
     },
   },

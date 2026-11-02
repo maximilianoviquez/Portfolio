@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const f='.oxlintrc.json';const j=JSON.parse\\(require\\('fs'\\).readFileSync\\(f\\)\\);j.ignorePatterns=['.claude/**'];require\\('fs'\\).writeFileSync\\(f,JSON.stringify\\(j,null,2\\)+'\\\\n'\\)\")",
+      "Bash(git rm *)",
+      "Bash(git push *)",
+      "Bash(git rebase *)",
+      "Bash(gh run *)"
+    ]
+  }
+}

@@ -56,15 +56,6 @@ export function Hero() {
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-3">
           <a
-            href={contact.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-white/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] transition-transform hover:-translate-y-0.5"
-          >
-            <Icon slug="github" className="w-4 h-4" />
-            GitHub
-          </a>
-          <a
             href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"

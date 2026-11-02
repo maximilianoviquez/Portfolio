@@ -48,11 +48,6 @@ export function Contact() {
 
       <ul className="flex items-center gap-6">
         <li>
-          <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="block transition-transform hover:-translate-y-0.5 hover:text-violet">
-            <Icon slug="github" className="w-6 h-6" />
-          </a>
-        </li>
-        <li>
           <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="block transition-transform hover:-translate-y-0.5 hover:text-violet">
             <Icon slug="linkedin" className="w-6 h-6" />
           </a>
